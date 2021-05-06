@@ -1,0 +1,14 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+
+<body>
+<h1 class="blue-header">Star Ships</h1>
+<div th:each="starship : ${starships}">
+  <div th:object="${starship}">
+    <h2 th:text="*{name}">Name</h2>
+    <p th:text="*{fuelCapacity}">Fuel Capacity</p>
+    <a th:href="'/starships/' + ${starship.id}">More Info</a>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+
+<body>
+<div th:object="${starship}">
+  <h1 class="blue-header" th:text="*{name}"></h1>
+  <p class="description" th:text="*{description}"></p>
+  <p th:text="*{fuelCapacity + ' Teraliters, ' + fuelGauge}"></p>
+</div>
+<a th:href="'/starships'">Go Back</a>
+</body>
+</html>

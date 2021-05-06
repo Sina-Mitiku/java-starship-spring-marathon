@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html th:fragment="layout (template)">
+<head>
+  <title>Marathon</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+<h1>Java Spring Marathon</h1>
+
+<th:block th:include="${template}" />
+</body>
+</html>
